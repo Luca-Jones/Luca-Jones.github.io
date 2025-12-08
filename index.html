@@ -2,31 +2,55 @@
 <html lang="en">
 
     <head>
-        <title>Luca Jones</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Free Web tutorials">
+        <meta name="description" content="Luca Jones' portfolio website showcasing projects, courses, and other posts!">
         <meta name="keywords" content="Luca Jones, Website, Portfolio, Resume, Engineering">
         <meta name="author" content="Luca Jones">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <base href="https://Luca-Jones.github.io/" target="_blank">
-        <link rel="stylesheet" href="css/style.css">
+        <base href="."> 
+        <!-- https://Luca-Jones.github.io/ -->
+        <link rel="stylesheet" href="style.css">
+        <title>Luca Jones | Home</title>
     </head>
 
-    <body>
-        <nav>
-            <a href="/"> Home | </a>
-            <!-- <a href="/projects">Projects | </a> -->
-            <!-- <a href="/education">Education | </a> -->
-            <a href="https://github.com/Luca-Jones"> GitHub</a>
-        </nav>
+    <body> 
+
+        <header>
+            <nav>
+                <a href="index.html"> Home</a>
+                <a href="https://github.com/Luca-Jones"> GitHub</a>
+                <a href="projects.html">Projects</a>
+                <a href="courses.html">Courses</a>
+                <!-- <a href="blog.html">Blog</a> -->
+            </nav>
+        </header>
 
         <main>
-            <h1>Luca Jones</h1>
-            <!-- <img src="/images/profile.jpg" alt="profile picture of Luca Jones"> -->
-            <p>
-                Welcome! This site is still under construction, but please come back to visit soon!
-            </p>
+
+            <section>
+                <h1>Welcome!</h1>
+                <div id="profile">
+                    <img src="images/profile.webp" alt="Luca Jones Profile Picture" id="profile-pic">
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am an Engineering Physics student in my third year at the University of British Columbia.
+                    This site is still under construction, but please come back to visit soon! 
+                </p>
+            </section>
+
         </main>
+
+        <footer>
+            <p>If you'd like to get in touch, feel free to shoot me an email or connect on LinkedIn!</p>
+            <a class="links" href="mailto:luca.b.jones@prtonmail.com">luca.b.jones@prtonmail.com</a> | 
+            <a class="links" href="https://github.com/Luca-Jones">Github</a> | 
+            <a class="links" href="https://www.linkedin.com/in/luca-jones1">LinkedIn</a>
+        </footer>
+
     </body>
 
 </html>
