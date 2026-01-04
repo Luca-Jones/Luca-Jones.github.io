@@ -170,11 +170,12 @@ img, video {
     align-items: center;
 }
 
-#project-list{
-    width: 700px;
+#project-list, #projects {
+    width: 900px;
+    margin: 0 auto;
 }
 
-.course-card, .project-card {
+.project-card {
     background-color: var(--bg-0);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
@@ -186,6 +187,21 @@ img, video {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+}
+
+#course-list {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background-color: var(--bg-0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    /* border: 2px solid var(--bg-green); */
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
 }
 
 .project-description {
