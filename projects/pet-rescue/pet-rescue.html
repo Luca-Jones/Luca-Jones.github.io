@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Luca Jones' portfolio website showcasing projects, courses, and other posts!">
+        <meta name="keywords" content="Luca Jones, Website, Portfolio, Resume, Engineering">
+        <meta name="author" content="Luca Jones">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="https://Luca-Jones.github.io/">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="projects/pet-rescue/pet-rescue.css">
+        <title>Luca Jones | Pet Rescue Robot</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html"> Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="courses.html">Courses</a>
+                <a href="resume.html">Resume</a>
+                <!-- <a href="blog.html">Blog</a> -->
+                <a href="https://github.com/Luca-Jones"> GitHub</a>
+            </nav>
+        </header>
+
+        <main>
+            
+            <h1>Autonomous Pet Rescue Robot</h1>
+            <div class="center-div">
+                <a class="links" href="https://github.com/Luca-Jones/enph-253-pet-rescue">Find the source code here on GitHub</a>
+            </div>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img src="projects/pet-rescue/images/news.png" alt="news photo">
+                    <img src="projects/pet-rescue/images/course.png" alt="pet-rescue course">
+                </div>
+                <div class="flex-item">
+                    <h2>Overview</h2>
+                    <p>
+                        This project involved designing and constructing a fully autonomous robot, 
+                        as part of a rigorous instrument design course, to compete in the 2025 
+                        Engineering Physics Robot Summer Competition at UBC. The competition theme was 
+                        "Pet Rescue"; the goal of the competition was to then navigate a 
+                        course along black tape and retrieve 'animal plushies' along the track, 
+                        to ultimately return them to a safe zone at the start of the course. 
+                        Some of the pets were obstructed or inside of tight spaces and certain sections
+                        of the track are rough and lack the guiding tape. There are many different ways to
+                        return the pets to the safe zone, such as driving back, launching them at the basket,
+                        and hooking them onto the zip-line, which made the challenge interesting and exciting!
+                        Over the course of 2 months, my teammates and I worked tirelessly in the lab to design
+                        and build our robot.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h2>Our Design</h2>
+                    <p>
+                        There are many ways to approach this challenge, but we decided early on that our 
+                        robot would attempt to collect all of the pets into a basket and then raise this basket
+                        onto the zip-line at the end of the course. To better organize the aspects of the design,
+                        we split it up between the mechanical design, electrical circuits, and the software/firmware 
+                        needed to control the robot. Each of my teammates and I took on work from each of these 
+                        categories and integrated them together to ultimately construct our robot to compete in the race.
+                    </p>
+                </div>
+                <div class="flex-item">
+                    <img src="projects/pet-rescue/images/robot.png" alt="Autonomous Robot">
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <video muted controls>
+                        <source src="projects/pet-rescue/images/cascade.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+                <div class="flex-item">
+                    <h2>Mechanical Design</h2>
+                    <p>
+                        The robot was as large as possible to accommodate
+                        the large basket needed for all of the pets and a cascading lift system was installed on 
+                        each side of the basket to raise it up high enough to hook into the zip-line. The chassis 
+                        was made from hardboard cut with the laser cutter supported by rigid aluminum bars which 
+                        we sized using a water jet cutter. This allowed us to support the large basket as well as
+                        the retrieval arm. In order to collect the pets, we designed a robotic arm that works on
+                        the principle of a four bar linkage. This allows for the claw at the end of the arm to always
+                        be parallel to the ground and removes the need for a third servo motor at the wrist joint 
+                        found in traditional robotic arms. The claw attached to the end of the arm also used the 
+                        concept of a four bar linkage to keep the claws straight rather than pinching in. 
+                        In addition, we used a lazy susan, a pair of gears, and a magnetic angle encoder to allow 
+                        for the arm to rotate left and right using closed-loop control. Besides learning a lot about 
+                        designing mechanical devices and using 3D CAD software such as OnShape, I was able to put my
+                        machining skills to work utilizing the lathe and water jet cutter.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img class="short-image" src="projects/pet-rescue/images/arm.png" alt="robotic arm CAD model">
+                </div>
+                <div class="flex-item">
+                    <img class="short-image" src="projects/pet-rescue/images/lathe.png" alt="Luca using the lathe">
+                </div>
+                <div class="flex-item">
+                    <img class="short-image" src="projects/pet-rescue/images/chassis.jpeg" alt="chassis layout">
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h2>Electrical Design</h2>
+                    <p>
+                        Many circuits and sensors were needed to make the robot work autonomously. In order to
+                        follow the tape on the surface, we needed IR sensors, and to detect the edge of the track 
+                        as to not fall off, we used a simple sonar sensor. To detect the pets, we used a 
+                        time-of-flight array module, which worked as a 8x8 resolution height map. The circuit I 
+                        worked the most on was the H-bridge motor driver. I started with a breadboard prototype
+                        and then designed a printed circuit board. The PCB was able to drive both of the rear wheels
+                        as well as the cascading lift mechanism.
+                    </p>
+                </div>
+                <div class="flex-item">
+                    <img src="projects/pet-rescue/images/h-bridge.png" alt="H-bridge PCB">
+                    <!-- <img src="projects/pet-rescue/images/h-bridge-breadboard.png" alt="H-bridge breadboard"> -->
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img src="projects/pet-rescue/images/state-machine.png" alt="state machine diagram">
+                </div>
+                <div class="flex-item">
+                    <h2>Firmware</h2>
+                    <p>
+                        I programmed an ESP32 micro-controller using the FreeRTOS framework to read 
+                        sensor inputs, make decisions, and actuate motors. I designed the high-level 
+                        logic of the robot's control and dug deep into the low-level firmware to efficiently
+                        use the limited hardware timers and pwm channels. To implement the logic 
+                        the robot needs to complete the track and retrieve all of the pets, I decided
+                        to use the finite state machine paradigm. Each state has a associated task, and 
+                        depending on which state it is currently in and what inputs it sees, 
+                        it may transition to a new state and start executing a new set of instructions.
+                        Another important firmware challenge was the tape following. We used infrared reflectance 
+                        sensors to detect the black tape against the white track, which allowed us to use closed-loop
+                        control to accurately follow the tape. We implemented this using a heuristically tuned 
+                        PID controller. 
+                        One of my favorite parts of this project was programming the positioning of the arm.
+                        Using simple geometry, I was able to translate coordinates in a plane into rotation
+                        angles for the servo motors to move to, allowing us to grasp the pets with ease.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <video muted controls>
+                    <source src="projects/pet-rescue/images/arm.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> 
+                <video muted controls>
+                    <source src="projects/pet-rescue/images/tape-following.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h2>Conclusion</h2>
+                    <p>
+                        After months of spending 10-12 hours a day in the lab and many sleepless nights,
+                        our team came away from this project with many valuable lessons in 
+                        mechanical, electrical, and software design and construction. 
+                        We also gained profound first-hand insights into prototyping, project management,
+                        and systems design.
+                        Most importantly, my teammates and I had a blast designing and building this
+                        robot and this experience left me with a stronger passion for tinkering and Engineering!
+                    </p>
+                </div>
+                <div class="flex-item">
+                    <img src="projects/pet-rescue/images/group.png" alt="group photo">
+                </div>
+            </div>
+            
+            <div class="center-div">
+                <video muted controls id="demo-video">
+                    <source src="projects/pet-rescue/images/run.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>If you'd like to get in touch, feel free to shoot me an email or connect on LinkedIn!</p>
+            <a class="links" href="mailto:luca.b.jones@prtonmail.com">luca.b.jones@prtonmail.com</a> | 
+            <a class="links" href="https://github.com/Luca-Jones">Github</a> | 
+            <a class="links" href="https://www.linkedin.com/in/luca-jones1">LinkedIn</a>
+        </footer>
+
+    </body>
+
+</html>

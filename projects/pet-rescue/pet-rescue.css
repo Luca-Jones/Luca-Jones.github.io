@@ -1,0 +1,26 @@
+p {
+    text-align: justify;
+}
+
+.short-image {
+    height: 400px;
+    width: auto;
+}
+
+video {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 400px;
+    height: 400px;
+}
+
+#demo-video {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+footer p {
+    text-align: center;
+}
